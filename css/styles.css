@@ -26,9 +26,16 @@ p {
 
 section {
     display: flex;
+    flex-direction: column;
     height: 100vh;
     align-items: center;
     padding: 100px;
+    margin-top: 60px;
+}
+
+section.home {
+    flex-direction: row;
+    margin-top: 0;
 }
 
 .home-content {
@@ -155,6 +162,36 @@ section {
     transform: scale(0.5)
 }
 
+/* Strategy Page */
+
+.services {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+.services .service {
+    padding: 30px;
+    background: #f4f4f4;
+    transition: ease-in 0.6s;
+}
+
+.services .service:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.services .service h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.services .service .icon img {
+    max-width: 100px;
+}
+
 /* Media Queries */
 
 @media(max-width: 1068px) {
@@ -174,5 +211,17 @@ section {
 
     .navigation ul li {
         font-size: 2rem;
+    }
+
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+@media(max-width: 768px) {
+    .services {
+        grid-template-columns: 1fr;
+
     }
 }
