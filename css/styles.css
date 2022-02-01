@@ -2,6 +2,7 @@
 
 :root {
     --primary-color: #F985E5;
+    --secondary-color: #1b206e;
 }
 
 * {
@@ -110,7 +111,7 @@ section.home {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: ease-in 0.5s
+    transition: ease-in 0.2s
 }
 
 .navigation ul {
@@ -137,7 +138,7 @@ section.home {
 
 .navigation.active {
     left: 0;
-    transition: ease-in 0.5s;
+    transition: ease-in 0.2s;
 }
 
 .navigation .social-bar {
@@ -305,6 +306,29 @@ section.home {
 
 }
 
+.contact-info {
+    width: 250px;
+    background: #f9f9f9;
+    padding: 60px 40px 20px;
+}
+
+.contact-info .info-box {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    ;
+}
+
+.contact-info .info-box .contact-icon {
+    width: 20px;
+    margin-right: 40px;
+    ;
+}
+
+.contact-info .info-box .details h4 {
+    color: #1b206e;
+}
+
 /* Media Queries */
 
 @media(max-width: 1068px) {
@@ -329,6 +353,32 @@ section.home {
     .services {
         grid-template-columns: repeat(2, 1fr);
 
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact-form {
+        width: 100%;
+        padding: 30px 30px 20px;
+    }
+
+    .contact-form .row {
+        flex-direction: column;
+
+    }
+
+    .contact-form .input50,
+    .contact-form .input100 {
+        width: 100%;
+        margin: 0;
+    }
+
+    .contact-info {
+        width: 100%;
+        margin-top: 20px;
+        padding: 30px 30px 20px;
     }
 }
 
